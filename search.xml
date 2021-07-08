@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>vi/vim 用法</title>
+      <link href="/2021/07/08/vim-%E7%94%A8%E6%B3%95/"/>
+      <url>/2021/07/08/vim-%E7%94%A8%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="vi-vim-的使用"><a href="#vi-vim-的使用" class="headerlink" title="vi/vim 的使用"></a>vi/vim 的使用</h1><p>vi/vim为分为三种模式,命令模式,输入模式,底线命令模式<br>命令模式:vi打开文件<br>输入模式:命令模式输<strong>i</strong><br>底线命令模式:命令模式输入 <strong>:</strong></p><h1 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h1><p><strong>i</strong> 在光标所在字符前开始插入<br><strong>a</strong> 在光标所在字符后开始插入<br><strong>o</strong> 在光标所在行的下面另起一新行插入<br><strong>x</strong> 删除当前光标所在处的字符<br><strong>u</strong> 撤销上一步的操作<br><strong>Ctrl+r</strong> 恢复上一步被撤销的操作</p><h1 id="插入模式"><a href="#插入模式" class="headerlink" title="插入模式"></a>插入模式</h1><p><strong>ESC</strong> 进入命令模式</p><h1 id="底线命令模式"><a href="#底线命令模式" class="headerlink" title="底线命令模式"></a>底线命令模式</h1><p><strong>wq</strong> 保存退出<br><strong>wq!</strong> 强制保存退出</p><h1 id="底线命令模式-set"><a href="#底线命令模式-set" class="headerlink" title="底线命令模式-set"></a>底线命令模式-set</h1><p><strong>set number</strong> 显示行号<br><strong>set readonly</strong>  文件只读，除非使用！可写<br><strong>set ai</strong> 让vi自动对齐<br><strong>set noai</strong> 取消自动对齐<br><strong>syntax on</strong> 开启语法高亮显示<br><strong>set encoding=utf-8</strong> 设置编码格式为uf-8<br><strong>set paste</strong> 重置粘贴格式</p><h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p><strong>g/aaa/d</strong> 删除包含aaa字符的行<br><strong>g!/aaa/d</strong> 删除不包含aaa字符的好<br><strong><em>g/^\s</em>$/d</strong> 删除空白行<br><strong>%s/aaa/yyy/g</strong> 将aaa替换为yyy<br><strong>%s/yes//gn</strong> 显示匹配yes单词的数量</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>WFUZZ模糊测试</title>
+      <link href="/2021/07/07/WFUZZ%E6%A8%A1%E7%B3%8A%E6%B5%8B%E8%AF%95/"/>
+      <url>/2021/07/07/WFUZZ%E6%A8%A1%E7%B3%8A%E6%B5%8B%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="WUFZZ字典"><a href="#WUFZZ字典" class="headerlink" title="WUFZZ字典"></a>WUFZZ字典</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">├── Injections</span><br><span class="line">│   ├── All_attack.txt</span><br><span class="line">│   ├── SQL.txt</span><br><span class="line">│   ├── Traversal.txt</span><br><span class="line">│   ├── XML.txt</span><br><span class="line">│   ├── XSS.txt</span><br><span class="line">│   └── bad_chars.txt</span><br><span class="line">├── general</span><br><span class="line">│   ├── admin-panels.txt</span><br><span class="line">│   ├── big.txt</span><br><span class="line">│   ├── catala.txt</span><br><span class="line">│   ├── common.txt</span><br><span class="line">│   ├── euskera.txt</span><br><span class="line">│   ├── extensions_common.txt</span><br><span class="line">│   ├── http_methods.txt</span><br><span class="line">│   ├── medium.txt</span><br><span class="line">│   ├── megabeast.txt</span><br><span class="line">│   ├── mutations_common.txt</span><br><span class="line">│   ├── spanish.txt</span><br><span class="line">│   └── test.txt</span><br><span class="line">├── others</span><br><span class="line">│   ├── common_pass.txt</span><br><span class="line">│   └── names.txt</span><br><span class="line">├── stress</span><br><span class="line">│   ├── alphanum_case.txt</span><br><span class="line">│   ├── alphanum_case_extra.txt</span><br><span class="line">│   ├── char.txt</span><br><span class="line">│   ├── doble_uri_hex.txt</span><br><span class="line">│   ├── test_ext.txt</span><br><span class="line">│   └── uri_hex.txt</span><br><span class="line">├── vulns</span><br><span class="line">│   ├── apache.txt</span><br><span class="line">│   ├── cgis.txt</span><br><span class="line">│   ├── coldfusion.txt</span><br><span class="line">│   ├── dirTraversal-nix.txt</span><br><span class="line">│   ├── dirTraversal-win.txt</span><br><span class="line">│   ├── dirTraversal.txt</span><br><span class="line">│   ├── domino.txt</span><br><span class="line">│   ├── fatwire.txt</span><br><span class="line">│   ├── fatwire_pagenames.txt</span><br><span class="line">│   ├── frontpage.txt</span><br><span class="line">│   ├── iis.txt</span><br><span class="line">│   ├── iplanet.txt</span><br><span class="line">│   ├── jrun.txt</span><br><span class="line">│   ├── netware.txt</span><br><span class="line">│   ├── oracle9i.txt</span><br><span class="line">│   ├── sharepoint.txt</span><br><span class="line">│   ├── sql_inj.txt</span><br><span class="line">│   ├── sunas.txt</span><br><span class="line">│   ├── tests.txt</span><br><span class="line">│   ├── tomcat.txt</span><br><span class="line">│   ├── vignette.txt</span><br><span class="line">│   ├── weblogic.txt</span><br><span class="line">│   └── websphere.txt</span><br><span class="line">└── webservices</span><br><span class="line">    ├── ws-dirs.txt</span><br><span class="line">    └── ws-files.txt</span><br></pre></td></tr></table></figure><h1 id="枚举网站"><a href="#枚举网站" class="headerlink" title="枚举网站"></a>枚举网站</h1><p>wfuzz -w 字典 <a href="http://127.0.0.1/FUZZ">http://127.0.0.1/FUZZ</a> 枚举网址目录<br>wfuzz -w 字典 <a href="http://127.0.0.1/index.FUZZ">http://127.0.0.1/index.FUZZ</a> 枚举后台脚本语言<br>wfuzz -w 字典 <a href="http://127.0.0.1/FUZZ.php">http://127.0.0.1/FUZZ.php</a> 枚举后台php文件<br>wfuzz -z list,”admin-CVS-cgi-bin”  -R1 <a href="http://127.0.0.1/FUZZ">http://127.0.0.1/FUZZ</a> 递归枚举<br>wfuzz -w 字典 -t 20 <a href="http://127.0.0.1/FUZZ">http://127.0.0.1/FUZZ</a> 枚举网址,目录线程为20</p><h1 id="枚举数字"><a href="#枚举数字" class="headerlink" title="枚举数字"></a>枚举数字</h1><p>wufzz -z range,1-100 <a href="http://127.0.0.1/index.php?id=FUZZ">http://127.0.0.1/index.php?id=FUZZ</a> 枚举id</p><h1 id="Post测试"><a href="#Post测试" class="headerlink" title="Post测试"></a>Post测试</h1><p>wfuzz -w 字典1 -w 字典2 -d ‘username=FUZZ&amp;password=FUZZ’ <a href="http://127.0.0.1/login.php">http://127.0.0.1/login.php</a></p><h1 id="Cookie测试"><a href="#Cookie测试" class="headerlink" title="Cookie测试"></a>Cookie测试</h1><p>wfuzz -w 字典 -b cookie=cookie <a href="http://127.0.0.1/admin/FUZZ">http://127.0.0.1/admin/FUZZ</a> 带凭证扫描</p><h1 id="Header测试"><a href="#Header测试" class="headerlink" title="Header测试"></a>Header测试</h1><p>wfuzz -w 字典测试HTTP请求方法<br>wfuzz -z list,”GET-POST-HEAD-PUT” -X FUZZ <a href="http://127.0.0.1/">http://127.0.0.1/</a><br>-H “Referer: <a href="http://127.0.0.1&quot;/">http://127.0.0.1&quot;</a> -H “X-Forwarded-For: FUZZ” <a href="http://127.0.0.1/index.php">http://127.0.0.1/index.php</a></p><h1 id="测试HTTP请求方法"><a href="#测试HTTP请求方法" class="headerlink" title="测试HTTP请求方法"></a>测试HTTP请求方法</h1><p>wfuzz -z list,”GET-POST-HEAD-PUT” -X FUZZ <a href="http://127.0.0.1/">http://127.0.0.1/</a></p><h1 id="使用代理"><a href="#使用代理" class="headerlink" title="使用代理"></a>使用代理</h1><p>wfuzz -w wordlist -p proxtHost:proxyPort:TYPE URL/FUZZ<br>wfuzz -w wordlist -p 127.0.0.1:1087:SOCKS5 URL/FUZZ</p><h1 id="http认证"><a href="#http认证" class="headerlink" title="http认证"></a>http认证</h1><p>wfuzz -z list,nonvalid-httpwatch –basic FUZZ:FUZZ <a href="http://127.0.0.1/">http://127.0.0.1/</a></p><h1 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h1><p>wfuzz -z file,wordlist,md5 <a href="http://127.0.0.1/FUZZ">http://127.0.0.1/FUZZ</a> 目录md5加密后参与枚举</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>科学上网-Clash</title>
+      <link href="/2021/07/07/net-1/"/>
+      <url>/2021/07/07/net-1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="转换"><a href="#转换" class="headerlink" title="转换"></a>转换</h1><p> <strong>进入<a href="http://freeguy.top:81/">http://freeguy.top:81/</a> 将ssr订阅转换为clash格式并导入</strong><br><img src="/images/pasted-0.png" alt="upload successful"><br>点击进入节点页面<br><img src="/images/pasted-2.png" alt="upload successful"></p><h1 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h1><p><img src="/images/pasted-1.png" alt="upload successful"></p><h1 id="选择节点"><a href="#选择节点" class="headerlink" title="选择节点"></a>选择节点</h1><p>进入选择一个节点<br><img src="/images/pasted-3.png" alt="upload successful"></p><h1 id="电脑设置代理"><a href="#电脑设置代理" class="headerlink" title="电脑设置代理"></a>电脑设置代理</h1><p><img src="/images/pasted-4.png" alt="upload successful"></p><h1 id="火狐配置代理"><a href="#火狐配置代理" class="headerlink" title="火狐配置代理"></a>火狐配置代理</h1><p><strong>设置-&gt;常规-&gt;网络设置-&gt;手动配置代理-&gt;http代理 127.0.0.1端口 7890</strong><br><img src="/images/pasted-5.png" alt="upload successful"><br>订阅购买:<br><br><a href="https://sdyun.cc/">https://sdyun.cc/</a><br><br><a href="https://cutt.ly/Tn4qWIb">https://cutt.ly/Tn4qWIb</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 科学上网 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2021/06/27/hello-world/"/>
+      <url>/2021/06/27/hello-world/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
